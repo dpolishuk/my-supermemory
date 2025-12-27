@@ -31,11 +31,12 @@
     "supermemory": "^4.0.0"
   },
   "devDependencies": {
-    "@opencode-ai/plugin": "^1.0.191",
+    "@opencode-ai/plugin": "latest",
     "@types/bun": "latest"
   },
   "peerDependencies": {
-    "typescript": "^5.9.3"
+    "@opencode-ai/plugin": ">=1.0.0",
+    "typescript": "^5.0.0"
   },
   "opencode": {
     "type": "plugin",
