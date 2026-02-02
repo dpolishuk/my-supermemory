@@ -281,46 +281,16 @@ Kimi CLI skill for persistent memory using Supermemory.
 
 ## Installation
 
-### For Humans
-
-#### Step 1: Install the CLI tool
+### Quick Install
 
 ```bash
+# 1. Install CLI tool
 bun add -g kimi-supermemory
-```
 
-Or use without installing (just add `@latest` to commands):
-
-```bash
-bunx kimi-supermemory@latest <command>
-```
-
-#### Step 2: Configure your API key
-
-Get your API key from [console.supermemory.ai](https://console.supermemory.ai)
-
-```bash
+# 2. Set API key (get from console.supermemory.ai)
 export SUPERMEMORY_API_KEY="sm_..."
-```
 
-Or run the interactive setup:
-
-```bash
-kimi-supermemory init
-```
-
-#### Step 3: Install the skill
-
-The skill file teaches Kimi CLI's LLM how to use supermemory:
-
-```bash
-mkdir -p ~/.codex/skills/kimi-supermemory
-cp $(bun pm bin)/../kimi-supermemory/SKILL.md ~/.codex/skills/kimi-supermemory/
-```
-
-Or manually download:
-
-```bash
+# 3. Install skill
 mkdir -p ~/.codex/skills/kimi-supermemory
 curl -o ~/.codex/skills/kimi-supermemory/SKILL.md \
   https://raw.githubusercontent.com/dpolishuk/my-supermemory/main/kimi-supermemory/SKILL.md
@@ -328,90 +298,38 @@ curl -o ~/.codex/skills/kimi-supermemory/SKILL.md \
 
 **Or let your agent do it** - paste this into Kimi CLI:
 ```
-Install kimi-supermemory by following https://raw.githubusercontent.com/dpolishuk/my-supermemory/main/README.md
+Install my-supermemory by following https://raw.githubusercontent.com/dpolishuk/my-supermemory/main/README.md
 ```
 
-### For LLM Agents
+### For LLM Agents (Kimi CLI)
 
 <details>
-<summary>Instructions for LLM Agents (click to expand)</summary>
+<summary>Click to expand agent installation instructions</summary>
 
-If you're an LLM agent helping set up kimi-supermemory, follow these steps:
-
-#### Step 1: Install the CLI tool
+If you're a Kimi CLI agent helping set up supermemory, run these commands:
 
 ```bash
+# Step 1: Install CLI tool
 bun add -g kimi-supermemory
-```
 
-Verify installation:
-```bash
-which kimi-supermemory
-```
-
-#### Step 2: Configure API key
-
-Ask the user to get their API key from [console.supermemory.ai](https://console.supermemory.ai).
-
-Then set it via environment variable:
-
-```bash
+# Step 2: Configure API key (ask user for key from console.supermemory.ai)
 export SUPERMEMORY_API_KEY="sm_..."
-```
 
-Or run the interactive setup:
-
-```bash
-kimi-supermemory init
-```
-
-#### Step 3: Install the skill
-
-```bash
+# Step 3: Install skill file
 mkdir -p ~/.codex/skills/kimi-supermemory
+curl -o ~/.codex/skills/kimi-supermemory/SKILL.md \
+  https://raw.githubusercontent.com/dpolishuk/my-supermemory/main/kimi-supermemory/SKILL.md
 
-# Copy SKILL.md from the package
-if [ -f "$(bun pm bin)/../kimi-supermemory/SKILL.md" ]; then
-  cp "$(bun pm bin)/../kimi-supermemory/SKILL.md" ~/.codex/skills/kimi-supermemory/
-else
-  # Download from GitHub
-  curl -o ~/.codex/skills/kimi-supermemory/SKILL.md \
-    https://raw.githubusercontent.com/dpolishuk/my-supermemory/main/kimi-supermemory/SKILL.md
-fi
-```
-
-#### Step 4: Verify setup
-
-Test the CLI:
-
-```bash
+# Step 4: Verify installation
 kimi-supermemory help
-```
-
-Test with a memory:
-
-```bash
 kimi-supermemory add "Test memory from setup" --type project-config
 kimi-supermemory list
 ```
 
-Check skill is installed:
+After installation, tell the user:
+> ✅ my-supermemory is now installed! I'll automatically save memories when you say "remember", "don't forget", etc., and retrieve relevant context for our conversations.
 
-```bash
-ls ~/.codex/skills/kimi-supermemory/SKILL.md
-```
-
-If you see the skill file, the setup is complete!
-
-#### Step 5: Initialize codebase memory (optional)
-
-Run this command and follow the prompts to explore and memorize the codebase:
-
-```bash
-kimi-supermemory init-codebase
-```
-
-This will guide you through researching the project and saving key insights.
+**Optional:** Run `kimi-supermemory init-codebase` to memorize this project's structure.
 
 </details>
 
