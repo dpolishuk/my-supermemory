@@ -21,7 +21,7 @@ export class SupermemoryClient {
   private getClient(): Supermemory {
     if (!this.client) {
       if (!isConfigured()) {
-        throw new Error("KIMI_SUPERMEMORY_API_KEY not set");
+        throw new Error("SUPERMEMORY_API_KEY not set");
       }
       this.client = new Supermemory({ apiKey: CONFIG.apiKey });
       this.client.settings.update({

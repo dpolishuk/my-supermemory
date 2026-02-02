@@ -35,7 +35,7 @@ else
 fi
 
 # Check for API key
-if [ -z "$KIMI_SUPERMEMORY_API_KEY" ] && [ -z "$SUPERMEMORY_API_KEY" ]; then
+if [ -z "$SUPERMEMORY_API_KEY" ]; then
     echo ""
     echo "🔑 Next step: Configure your API key"
     echo ""
@@ -43,7 +43,7 @@ if [ -z "$KIMI_SUPERMEMORY_API_KEY" ] && [ -z "$SUPERMEMORY_API_KEY" ]; then
     echo ""
     echo "Then either:"
     echo "  1. Run: kimi-supermemory init"
-    echo "  2. Set env var: export KIMI_SUPERMEMORY_API_KEY='sm_...'"
+    echo "  2. Set env var: export SUPERMEMORY_API_KEY='sm_...'"
 else
     echo -e "${GREEN}✓ API key already configured${NC}"
 fi

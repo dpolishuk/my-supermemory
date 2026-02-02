@@ -77,7 +77,6 @@ const fileConfig = loadConfig();
 
 function getApiKey(): string | undefined {
   // Priority: env var > config file
-  if (process.env.KIMI_SUPERMEMORY_API_KEY) return process.env.KIMI_SUPERMEMORY_API_KEY;
   if (process.env.SUPERMEMORY_API_KEY) return process.env.SUPERMEMORY_API_KEY;
   if (fileConfig.apiKey) return fileConfig.apiKey;
   return undefined;

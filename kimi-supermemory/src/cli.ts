@@ -57,7 +57,7 @@ Commands:
   help                   Show this help message
 
 Environment:
-  KIMI_SUPERMEMORY_API_KEY    Your Supermemory API key
+  SUPERMEMORY_API_KEY    Your Supermemory API key
 
 Examples:
   bunx kimi-supermemory add "Uses Bun runtime" --type project-config
@@ -134,7 +134,7 @@ function parseArgs(): Args {
 
 async function addCommand(args: Args): Promise<number> {
   if (!isConfigured()) {
-    console.error("Error: KIMI_SUPERMEMORY_API_KEY not set");
+    console.error("Error: SUPERMEMORY_API_KEY not set");
     console.error("Get your API key from https://console.supermemory.ai");
     return 1;
   }
@@ -174,7 +174,7 @@ async function addCommand(args: Args): Promise<number> {
 
 async function searchCommand(args: Args): Promise<number> {
   if (!isConfigured()) {
-    console.error("Error: KIMI_SUPERMEMORY_API_KEY not set");
+    console.error("Error: SUPERMEMORY_API_KEY not set");
     return 1;
   }
 
@@ -250,7 +250,7 @@ function printSearchResults(
 
 async function listCommand(args: Args): Promise<number> {
   if (!isConfigured()) {
-    console.error("Error: KIMI_SUPERMEMORY_API_KEY not set");
+    console.error("Error: SUPERMEMORY_API_KEY not set");
     return 1;
   }
 
@@ -289,7 +289,7 @@ async function listCommand(args: Args): Promise<number> {
 
 async function forgetCommand(args: Args): Promise<number> {
   if (!isConfigured()) {
-    console.error("Error: KIMI_SUPERMEMORY_API_KEY not set");
+    console.error("Error: SUPERMEMORY_API_KEY not set");
     return 1;
   }
 
@@ -312,7 +312,7 @@ async function forgetCommand(args: Args): Promise<number> {
 
 async function contextCommand(args: Args): Promise<number> {
   if (!isConfigured()) {
-    console.error("Error: KIMI_SUPERMEMORY_API_KEY not set");
+    console.error("Error: SUPERMEMORY_API_KEY not set");
     return 1;
   }
 
@@ -405,7 +405,7 @@ async function initCommand(): Promise<number> {
   console.log("\n✓ Credentials saved!");
   console.log(`  Location: ${CREDENTIALS_FILE}`);
   console.log("\nYou can also set the environment variable:");
-  console.log(`  export KIMI_SUPERMEMORY_API_KEY="${apiKey}"`);
+  console.log(`  export SUPERMEMORY_API_KEY="${apiKey}"`);
 
   rl.close();
   return 0;

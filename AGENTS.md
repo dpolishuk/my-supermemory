@@ -11,7 +11,7 @@ If the user wants to install my-supermemory, run these commands:
 bun add -g kimi-supermemory
 
 # Step 2: Configure API key (ask user for their key from console.supermemory.ai)
-export KIMI_SUPERMEMORY_API_KEY="sm_..."
+export SUPERMEMORY_API_KEY="sm_..."
 
 # Step 3: Install the skill
 mkdir -p ~/.codex/skills/kimi-supermemory
@@ -41,7 +41,7 @@ Ask the user: "Please get your API key from https://console.supermemory.ai"
 
 Once they provide it:
 ```bash
-export KIMI_SUPERMEMORY_API_KEY="sm_..."
+export SUPERMEMORY_API_KEY="sm_..."
 ```
 
 Or use interactive setup:
@@ -106,7 +106,7 @@ If `kimi-supermemory` command not found:
 - Or use with `bunx`: `bunx kimi-supermemory@latest <command>`
 
 If API errors:
-- Check `KIMI_SUPERMEMORY_API_KEY` is set: `echo $KIMI_SUPERMEMORY_API_KEY`
+- Check `SUPERMEMORY_API_KEY` is set: `echo $SUPERMEMORY_API_KEY`
 - Verify the key starts with `sm_`
 
 ## Usage Examples

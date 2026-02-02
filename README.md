@@ -300,7 +300,7 @@ bunx kimi-supermemory@latest <command>
 Get your API key from [console.supermemory.ai](https://console.supermemory.ai)
 
 ```bash
-export KIMI_SUPERMEMORY_API_KEY="sm_..."
+export SUPERMEMORY_API_KEY="sm_..."
 ```
 
 Or run the interactive setup:
@@ -356,7 +356,7 @@ Ask the user to get their API key from [console.supermemory.ai](https://console.
 Then set it via environment variable:
 
 ```bash
-export KIMI_SUPERMEMORY_API_KEY="sm_..."
+export SUPERMEMORY_API_KEY="sm_..."
 ```
 
 Or run the interactive setup:
@@ -530,7 +530,7 @@ Create `~/.config/kimi/supermemory.json`:
 }
 ```
 
-All fields optional. Environment variable `KIMI_SUPERMEMORY_API_KEY` takes precedence.
+All fields optional. Environment variable `SUPERMEMORY_API_KEY` takes precedence.
 
 ## Memory Scoping
 

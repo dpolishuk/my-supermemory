@@ -110,7 +110,7 @@ bun install
 bun run build
 
 # Set API key
-export KIMI_SUPERMEMORY_API_KEY="sm_..."
+export SUPERMEMORY_API_KEY="sm_..."
 
 # Test commands
 ./dist/cli.js add "Test memory" --type project-config

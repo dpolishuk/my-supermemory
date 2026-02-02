@@ -13,7 +13,7 @@ This skill enables kimi-cli to save and retrieve memories using [Supermemory](ht
 Set your Supermemory API key:
 
 ```bash
-export KIMI_SUPERMEMORY_API_KEY="sm_..."
+export SUPERMEMORY_API_KEY="sm_..."
 ```
 
 Or run the setup command:
@@ -174,6 +174,6 @@ This will guide you through:
 
 **Command not found?** Make sure `bunx` is available or use `npx`.
 
-**API errors?** Check that `KIMI_SUPERMEMORY_API_KEY` is set.
+**API errors?** Check that `SUPERMEMORY_API_KEY` is set.
 
 **No memories appearing?** Run `bunx kimi-supermemory@latest list` to verify connection.

@@ -41,7 +41,7 @@ kimi-supermemory init  # Interactive setup
 ### 3. Configuration
 
 - Config file: `~/.config/kimi/supermemory.json`
-- API key: `KIMI_SUPERMEMORY_API_KEY` env var
+- API key: `SUPERMEMORY_API_KEY` env var
 
 ## Memory Scoping
 
