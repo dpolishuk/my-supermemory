@@ -1,12 +1,12 @@
 {
-  "name": "opencode-supermemory",
+  "name": "my-supermemory",
   "version": "2.0.1",
   "description": "OpenCode plugin that gives coding agents persistent memory using Supermemory",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "opencode-supermemory": "./dist/cli.js"
+    "my-supermemory": "./dist/cli.js"
   },
   "scripts": {
     "build": "bun build ./src/index.ts --outdir ./dist --target node && bun build ./src/cli.ts --outfile ./dist/cli.js --target node && tsc --emitDeclarationOnly",

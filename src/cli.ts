@@ -9,7 +9,7 @@ import { startAuthFlow, clearCredentials, loadCredentials } from "./services/aut
 const OPENCODE_CONFIG_DIR = join(homedir(), ".config", "opencode");
 const OPENCODE_COMMAND_DIR = join(OPENCODE_CONFIG_DIR, "command");
 const OH_MY_OPENCODE_CONFIG = join(OPENCODE_CONFIG_DIR, "oh-my-opencode.json");
-const PLUGIN_NAME = "opencode-supermemory@latest";
+const PLUGIN_NAME = "my-supermemory@latest";
 
 const SUPERMEMORY_INIT_COMMAND = `---
 description: Initialize Supermemory with comprehensive codebase knowledge
@@ -172,7 +172,7 @@ description: Authenticate with Supermemory via browser
 Run this command to authenticate the user with Supermemory:
 
 \`\`\`bash
-bunx opencode-supermemory@latest login
+bunx my-supermemory@latest login
 \`\`\`
 
 This will:
@@ -184,7 +184,7 @@ Wait for the command to complete, then inform the user whether authentication su
 
 If the user wants to log out instead, run:
 \`\`\`bash
-bunx opencode-supermemory@latest logout
+bunx my-supermemory@latest logout
 \`\`\`
 `;
 
@@ -356,7 +356,7 @@ interface InstallOptions {
 }
 
 async function install(options: InstallOptions): Promise<number> {
-  console.log("\n🧠 opencode-supermemory installer\n");
+  console.log("\n🧠 my-supermemory installer\n");
 
   const rl = options.tui ? createReadline() : null;
 
@@ -437,7 +437,7 @@ async function install(options: InstallOptions): Promise<number> {
 
   // Non-interactive mode - print instructions
   console.log("Run this command to authenticate:");
-  console.log("  bunx opencode-supermemory@latest login");
+  console.log("  bunx my-supermemory@latest login");
   console.log("\nOr set your API key manually:");
   console.log('  export SUPERMEMORY_API_KEY="sm_..."');
   console.log("\n" + "─".repeat(50));
@@ -476,7 +476,7 @@ function logout(): number {
 
 function printHelp(): void {
   console.log(`
-opencode-supermemory - Persistent memory for OpenCode agents
+my-supermemory - Persistent memory for OpenCode agents
 
 Commands:
   install    Install and configure the plugin
@@ -486,9 +486,9 @@ Commands:
   logout     Clear stored credentials
 
 Examples:
-  bunx opencode-supermemory@latest install
-  bunx opencode-supermemory@latest login
-  bunx opencode-supermemory@latest logout
+  bunx my-supermemory@latest install
+  bunx my-supermemory@latest login
+  bunx my-supermemory@latest logout
 `);
 }
 

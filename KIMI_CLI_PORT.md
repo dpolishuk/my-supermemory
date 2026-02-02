@@ -1,6 +1,6 @@
 # Kimi CLI Port - Summary
 
-This document summarizes the port of the opencode-supermemory plugin to kimi-cli.
+This document summarizes the port of the my-supermemory plugin to kimi-cli.
 
 ## Architecture Differences
 

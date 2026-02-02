@@ -11,7 +11,7 @@ Your agent remembers what you tell it - across sessions, across projects.
 
 ---
 
-# opencode-supermemory
+# my-supermemory
 
 OpenCode plugin for persistent memory.
 
@@ -20,7 +20,7 @@ OpenCode plugin for persistent memory.
 ### For Humans
 
 ```bash
-bunx opencode-supermemory@latest install
+bunx my-supermemory@latest install
 ```
 
 Then get your API key from [console.supermemory.ai](https://console.supermemory.ai) and set it:
@@ -31,7 +31,7 @@ export SUPERMEMORY_API_KEY="sm_..."
 
 **Or let your agent do it** - paste this into OpenCode:
 ```
-Install opencode-supermemory by following https://raw.githubusercontent.com/dpolishuk/my-supermemory/main/README.md
+Install my-supermemory by following https://raw.githubusercontent.com/dpolishuk/my-supermemory/main/README.md
 ```
 
 ### For LLM Agents
@@ -39,12 +39,12 @@ Install opencode-supermemory by following https://raw.githubusercontent.com/dpol
 <details>
 <summary>Instructions for LLM Agents (click to expand)</summary>
 
-If you're an LLM agent helping set up opencode-supermemory, follow these steps:
+If you're an LLM agent helping set up my-supermemory, follow these steps:
 
 #### Step 1: Run the installer
 
 ```bash
-bunx opencode-supermemory@latest install --no-tui
+bunx my-supermemory@latest install --no-tui
 ```
 
 This will:
@@ -60,7 +60,7 @@ cat ~/.config/opencode/opencode.jsonc
 Should contain:
 ```json
 {
-  "plugin": ["opencode-supermemory"]
+  "plugin": ["my-supermemory"]
 }
 ```
 
@@ -70,7 +70,7 @@ If not, add it manually:
 ```jsonc
 {
   "plugin": [
-    "opencode-supermemory"
+    "my-supermemory"
     // ... other plugins
   ]
 }
@@ -79,7 +79,7 @@ If not, add it manually:
 **JSON:**
 ```json
 {
-  "plugin": ["opencode-supermemory"]
+  "plugin": ["my-supermemory"]
 }
 ```
 
@@ -112,7 +112,7 @@ opencode -c
 They should see `supermemory` in the tools list. If not, check:
 1. Is `SUPERMEMORY_API_KEY` set?
 2. Is the plugin in `opencode.jsonc`?
-3. Check logs: `tail ~/.opencode-supermemory.log`
+3. Check logs: `tail ~/.my-supermemory.log`
 
 #### Step 5: Initialize codebase memory (optional)
 
@@ -263,14 +263,14 @@ Local install:
 
 ```jsonc
 {
-  "plugin": ["file:///path/to/opencode-supermemory"]
+  "plugin": ["file:///path/to/my-supermemory"]
 }
 ```
 
 ## Logs
 
 ```bash
-tail -f ~/.opencode-supermemory.log
+tail -f ~/.my-supermemory.log
 ```
 
 ---

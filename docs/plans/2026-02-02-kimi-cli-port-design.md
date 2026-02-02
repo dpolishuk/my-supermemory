@@ -2,7 +2,7 @@
 
 ## Overview
 
-Porting the opencode-supermemory plugin to work with kimi-cli using the skills system.
+Porting the my-supermemory plugin to work with kimi-cli using the skills system.
 
 ## Architecture Comparison
 
