@@ -1,0 +1,46 @@
+{
+  "name": "kimi-supermemory",
+  "version": "1.0.0",
+  "description": "Kimi CLI skill for persistent memory using Supermemory",
+  "type": "module",
+  "main": "dist/cli.js",
+  "bin": {
+    "kimi-supermemory": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "bun build ./src/cli.ts --outfile ./dist/cli.js --target node && tsc --emitDeclarationOnly",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "kimi",
+    "kimi-cli",
+    "skill",
+    "supermemory",
+    "memory",
+    "ai",
+    "coding-agent"
+  ],
+  "author": "Supermemory",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/supermemoryai/kimi-supermemory"
+  },
+  "dependencies": {
+    "supermemory": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.7.3"
+  },
+  "files": [
+    "dist",
+    "SKILL.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
