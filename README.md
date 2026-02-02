@@ -31,7 +31,7 @@ export SUPERMEMORY_API_KEY="sm_..."
 
 **Or let your agent do it** - paste this into OpenCode:
 ```
-Install opencode-supermemory by following https://raw.githubusercontent.com/supermemoryai/opencode-supermemory/main/README.md
+Install opencode-supermemory by following https://raw.githubusercontent.com/dpolishuk/my-supermemory/main/README.md
 ```
 
 ### For LLM Agents
@@ -323,12 +323,12 @@ Or manually download:
 ```bash
 mkdir -p ~/.codex/skills/kimi-supermemory
 curl -o ~/.codex/skills/kimi-supermemory/SKILL.md \
-  https://raw.githubusercontent.com/supermemoryai/kimi-supermemory/main/SKILL.md
+  https://raw.githubusercontent.com/dpolishuk/my-supermemory/main/kimi-supermemory/SKILL.md
 ```
 
 **Or let your agent do it** - paste this into Kimi CLI:
 ```
-Install kimi-supermemory by following https://raw.githubusercontent.com/supermemoryai/kimi-supermemory/main/README.md
+Install kimi-supermemory by following https://raw.githubusercontent.com/dpolishuk/my-supermemory/main/README.md
 ```
 
 ### For LLM Agents
@@ -376,7 +376,7 @@ if [ -f "$(bun pm bin)/../kimi-supermemory/SKILL.md" ]; then
 else
   # Download from GitHub
   curl -o ~/.codex/skills/kimi-supermemory/SKILL.md \
-    https://raw.githubusercontent.com/supermemoryai/kimi-supermemory/main/SKILL.md
+    https://raw.githubusercontent.com/dpolishuk/my-supermemory/main/kimi-supermemory/SKILL.md
 fi
 ```
 
